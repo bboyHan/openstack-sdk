@@ -1,0 +1,55 @@
+group 'org.openstack'
+version '1.0-SNAPSHOT'
+apply plugin: 'java'
+sourceCompatibility = 1.8
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+allprojects {
+
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        jcenter()
+        mavenCentral()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+    dependencies {
+//        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
+        "com.fasterxml.jackson.core:jackson-databind:2.11.3"
+    }
+}
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: "idea"
+
+    ext {
+        junitVersion = "4.12"
+        compileJava.options.encoding = 'UTF-8'
+        compileTestJava.options.encoding = 'UTF-8'
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    dependencies {
+//        compile(
+//                "com.fasterxml.jackson.core:jackson-databind:2.11.3"
+//        )
+        testCompile("junit:junit:${junitVersion}")
+    }
+}
+
+

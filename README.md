@@ -9,7 +9,7 @@ If you would like to contribute please see our contributing [guidelines](https:/
 
 ## Fixing Bugs Or Working on a new feature 
 
-The best way to get started is by heading to our [bug tracker](https://github.com/bboyHan/openstack-sdk/issue)) and finding open bugs that you think nobody is working on. 
+The best way to get started is by heading to our [bug tracker](https://github.com/bboyHan/openstack-sdk/issues)) and finding open bugs that you think nobody is working on. 
 It might be useful to comment on the thread to see the current state of the issue and if anybody has made any breakthroughs on it so far.
 
 We'd really appreciate that if you want to start Working on a new feature. First you can open an issue to describe the new features of your implementation,
